@@ -26,3 +26,39 @@ import React, { useState } from "react";
 
 // export default childComponent;
 
+//////////////////////////////////
+
+// Child-To-Parent Communication Example....
+
+import { useState } from "react";
+
+const ChildFeedBack = ({ onSendFeedback }) => {
+  const [inputFeedback, setInputFeedback] = useState(""); //Store user input
+
+  // Handle input change
+  const handleChange = (event) => {
+    setInputFeedback(event.target.value);
+  };
+
+  // Send feedback to parent when clicking submit
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSendFeedback(inputFeedback); // Sending data to Parent
+    setInputFeedback(""); // Clear input after submission
+  };
+
+  return (
+    <div>
+      <h3>Customer Feedback Form</h3>
+      <input
+        type="text"
+        placeholder="Enter feedback"
+        value={inputFeedback}
+        onChange={handleChange}
+      />
+      <button onClick={handleSubmit}>Submit Feedback</button>
+    </div>
+  );
+};
+
+export default ChildFeedBack;

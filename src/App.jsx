@@ -1,12 +1,12 @@
 import React from "react";
-import Parent from "./components/router/parent";
+// import Parent from "./components/router/parent";
 
 function App() {
-  return (
-    <div>
-      <Parent />
-    </div>
-  );
+  return <>
+  <div>
+    
+  </div>
+  </>;
 }
 
 export default App;
