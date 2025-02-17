@@ -20,8 +20,27 @@ import React from "react";
 
 // export default Parent;
 
-
 // Child-To-Parent Communication Example....
 
-import ChildFeedBack from "./ChildFeedBack";// Import Child Component.
+import { useState } from "react";
+import ChildFeedBack from "./ChildFeedBack"; // Import Child Component.
 
+const ParentManager = () => {
+  const [feedback, setFeedback] = useState(""); //store feedback from child
+  // Function to receive feedback from child
+  const handleFeedback = (customerFeedback) => {
+    setFeedback(customerFeedback);
+  };
+
+  return (
+    <div>
+      <h2>Manager Dashboard</h2>
+      <p>
+        <strong>Customer Feedback:</strong>
+        {feedback || "No feedback yet"}
+      </p>
+      <ChildFeedBack onSendFeedback={handleFeedback} />{" "}
+      {/* Passing function to child */}
+    </div>
+  );
+};
