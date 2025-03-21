@@ -8,7 +8,7 @@ const Footer = () => {
       style={{
         background: theme === "light" ? "#6e8cb5" : "#0d0dde",
         color: theme === "light" ? "#14de0d" : "#de0d41",
-        padding: "30px",
+        padding: "10px",
         width: "100%",
         position: "fixed",
         bottom: "0",
