@@ -23,7 +23,7 @@ import React from "react";
 // Child-To-Parent Communication Example....
 
 import { useState } from "react";
-import ChildFeedBack from "./ChildFeedBack"; // Import Child Component.
+import ChildFeedBack from "../components/child"; // Import Child Component.
 
 const ParentManager = () => {
   const [feedback, setFeedback] = useState(""); //store feedback from child
@@ -44,3 +44,5 @@ const ParentManager = () => {
     </div>
   );
 };
+
+export default ParentManager;
