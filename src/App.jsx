@@ -19,11 +19,13 @@
 import React from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 import ThemeToggle from "./components/ThemeToggle";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <ThemeProvider>
       <ThemeToggle />
+      <Footer />
     </ThemeProvider>
   );
 };
