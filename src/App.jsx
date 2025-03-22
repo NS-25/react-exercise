@@ -16,18 +16,28 @@
 
 // App.jsx ( wrap the app with context ).
 
-import React from "react";
-import { ThemeProvider } from "./context/ThemeContext";
-import ThemeToggle from "./components/ThemeToggle";
-import Footer from "./components/Footer";
+// import React from "react";
+// import { ThemeProvider } from "./context/ThemeContext";
+// import ThemeToggle from "./components/ThemeToggle";
+// import Footer from "./components/Footer";
+
+// const App = () => {
+//   return (
+//     <ThemeProvider>
+//       <ThemeToggle />
+//       {/* <Footer /> */}
+//     </ThemeProvider>
+//   );
+// };
+
+// export default App;
+
+// second time.
 
 const App = () => {
-  return (
-    <ThemeProvider>
-      <ThemeToggle />
-      <Footer />
-    </ThemeProvider>
-  );
+  return <>
+  
+  </>;
 };
 
 export default App;
