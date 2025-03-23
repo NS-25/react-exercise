@@ -33,11 +33,15 @@
 // export default App;
 
 // second time.
-
+import React from "react";
+import { ThemeProvider } from "./ThemeContext";
+import ThemeToggle from "./ThemeContext";
 const App = () => {
   return (
     <>
-      <h1>Hello I am App js...</h1>
+      <ThemeProvider>
+        <ThemeToggle />
+      </ThemeProvider>
     </>
   );
 };
