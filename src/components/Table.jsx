@@ -9,23 +9,25 @@ const Table = ({ data, onEdit, onDelete }) => {
           <th className="p-2 border">Email</th>
           <th className="p-2 border">Actions</th>
         </tr>
-        {data.map(() => (
+        {data.map((row) => (
           <tr key={row.id}>
             <td className="p-2 border">{row.name}</td>
             <td className="p-2 border">{row.email}</td>
             <td className="p-2 border">
-              <button
-                className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
-                onClick={() => onEdit(row)}
-              >
-                Edit
-              </button>
-              <button
-                className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
-                onClick={() => onDelete(row)}
-              >
-                Delete
-              </button>
+              <div className="flex justify-end space-x-2">
+                <button
+                  className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
+                  onClick={() => onEdit(row)}
+                >
+                  Edit
+                </button>
+                <button
+                  className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
+                  onClick={() => onDelete(row)}
+                >
+                  Delete
+                </button>
+              </div>
             </td>
           </tr>
         ))}
