@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "../portal/Modal";
 const DeleteModal = ({ onClose, onDelete }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">

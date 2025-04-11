@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "../portal/Modal";
 import { useState } from "react";
 
 const EditModal = ({ row, onClose, onUpdate }) => {
