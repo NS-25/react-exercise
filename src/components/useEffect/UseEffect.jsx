@@ -11,11 +11,18 @@ import { useEffect } from "react";
 // 	•	Setting a timer
 
 // Basic Syntax
-useEffect(() => {
-  // This code runs after the component is rendered
-}, []);
+// useEffect(() => {
+//   // This code runs after the component is rendered
+// }, []);
 
 function UseEffect() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    axios.get("/api/user").then((response) => {
+      setUser(response.data);
+    });
+  });
   return (
     <div>
       <h1>hello i am useEffect</h1>
